@@ -25,7 +25,8 @@
         optionLoading: {
           show: false,
           text: '请您稍后！',
-          modal: false
+          modal: false,
+          full: false
         },
         optionTip: {
           show: false,
@@ -161,7 +162,8 @@
     min-width: 1350px;
     min-height: 630px;
     overflow: auto;
-    background-color: #3d484e;
+    background-color: #fff;
+    --theme: #0079ff;
   }
 </style>
 
