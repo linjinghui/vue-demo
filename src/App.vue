@@ -115,35 +115,28 @@
               path = '/#/login';
               break;
             case 1:
+              // 首页
               path = '/#/index';
               break;
             case 2:
-              // 首页
-              path = '/#/home';
+              // 混合应用页
+              path = '/#/mixapp';
               break;
             case 3:
-              // 溯源监管平台
-              path = '/#/syjgpt';
+              // H5应用页
+              path = '/#/h5app';
               break;
             case 4:
-              // 分析预警平台
-              path = '/#/fxyjpt';
-              break;
-            case 5:
-              // 基础平台
-              path = '/#/jcpt';
-              break;
-            case 6:
-              // 修改密码
-              path = '/#/mmxg';
+              // H5应用页
+              path = '/#/devtool';
               break;
             default:
-              path = '/#/home';
+              path = '/#/index';
           }
         }
         var search = location.href.split('?');
 
-        if (search.length !== 2) {
+        if (search.length !== 2 || path === '/#/login') {
           search = '';
         } else {
           search = '?' + search[1];

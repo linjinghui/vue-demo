@@ -5,17 +5,17 @@
     <button @click="sload">load</button>|
     <button @click="sconfirm">confirm</button>|
     <button @click="sprompt">prompt</button>|
+    <cmp-button @click="login">登录</cmp-button>
   </div>
 </template>
 
 <script>
-  // import {InputIcon, Button} from 'web-base-ui';
-  // import {ajaxLoginPortalByAccount, ajaxLoginPortalByToken, ajaxGetVerCode} from '../../data/ajax.js';
+  import {Button} from 'web-base-ui';
   
   export default {
     name: 'Login',
     components: {
-      // cmpButton: Button
+      cmpButton: Button
     },
     data () {
       return {
@@ -26,6 +26,9 @@
       // 
     },
     methods: {
+      login: function () {
+        this.$root.toPage('', 1);
+      },
       stip: function () {
         this.$tip({ show: true, text: '提示内容', theme: 'warning' });
       },
@@ -64,7 +67,6 @@
           }],
           callback: function (data) {
             _this.$confirm({ show: false });
-            alert('callback');
           }
         });
       },
