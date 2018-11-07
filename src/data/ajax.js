@@ -13,6 +13,8 @@ export function ajaxGet (pms, callback) {
     name: pms.name
   };
   
+  console.log(params);
+
   $tip({ show: true, text: '请输入栏目名称', theme: 'warning' });
   $http({
     method: 'GET',
@@ -20,6 +22,9 @@ export function ajaxGet (pms, callback) {
     params: params
   }).then(function (successData) {
     callback && callback(successData.body);
+    if (successData.body.msgCode !== 200) {
+      $tip({ show: true, text: successData.body.msgDesc, theme: 'error' });
+    }
   });
 }
 
@@ -33,6 +38,8 @@ export function ajaxPost (pms, callback) {
     name: pms.name
   };
   
+  console.log(params);
+
   $http({
     method: 'POST',
     url: URL + '/portal/widget',
@@ -40,5 +47,8 @@ export function ajaxPost (pms, callback) {
     emulateJSON: true
   }).then(function (successData) {
     callback && callback(successData.body);
+    if (successData.body.msgCode !== 200) {
+      $tip({ show: true, text: successData.body.msgDesc, theme: 'error' });
+    }
   });
 }
