@@ -23,7 +23,7 @@ export function ajaxGet (pms, callback) {
   }).then(function (successData) {
     callback && callback(successData.body);
     if (successData.body.msgCode !== 200) {
-      $tip({ show: true, text: successData.body.msgDesc, theme: 'error' });
+      $tip({ show: true, text: successData.body.msgDesc, theme: 'danger' });
     }
   });
 }
@@ -48,7 +48,7 @@ export function ajaxPost (pms, callback) {
   }).then(function (successData) {
     callback && callback(successData.body);
     if (successData.body.msgCode !== 200) {
-      $tip({ show: true, text: successData.body.msgDesc, theme: 'error' });
+      $tip({ show: true, text: successData.body.msgDesc, theme: 'danger' });
     }
   });
 }

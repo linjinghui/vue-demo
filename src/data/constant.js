@@ -20,7 +20,13 @@ $http.interceptors.push(function (request, next) {
   // 显示加载动画
   _this.$loading({show: true});
   // 设置请求头
-  // request.headers.set('Authorization', token);
+  if (request.header) {
+    for (var key in request.header) {
+      request.headers.set(key, request.header[key]);
+    }
+  } else {
+    request.headers.set('Authorization', token);
+  }
   // 拦截处理全局ajax回调
   next(function (response) {
     // 隐藏加载动画

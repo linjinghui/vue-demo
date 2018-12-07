@@ -158,6 +158,9 @@
     background-color: #fff;
     --theme: #0079ff;
   }
+  
+  /* 笔记本尺寸 1366 * 768 */
+  @media screen and (max-width: 1366px) {}
 </style>
 
 <style lang="scss" class="cssForm">
