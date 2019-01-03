@@ -3,6 +3,7 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const base = require('../config/webpack.base')
 const config = require('../config/config')
@@ -34,6 +35,7 @@ base.plugins.push(
     name: 'vendor',
     filename: 'js/vendor.[chunkhash:8].js'
   })
+  // new BundleAnalyzerPlugin()
 )
 
 // Rules Configuration
