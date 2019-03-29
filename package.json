@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "_comment": "npm run build BAP 可以在打包后开启可视化资源分析工具",
     "prebuild": "rimraf ./dist",
     "build": "webpack --config build/webpack.prod.js",
     "dev": "nodemon build/server.js"
