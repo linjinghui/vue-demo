@@ -8,6 +8,9 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const base = require('../config/webpack.base')
 const config = require('../config/config')
 
+// npm 入参
+const args = process.argv.splice(2)
+
 base.entry.vendor = config.vendor
 base.output.filename = 'js/[name].[chunkhash:8].js'
 base.output.publicPath = './'
@@ -35,8 +38,12 @@ base.plugins.push(
     name: 'vendor',
     filename: 'js/vendor.[chunkhash:8].js'
   })
-  // new BundleAnalyzerPlugin()
 )
+
+// 是否需要BundleAnalyzerPlugin 可视化资源分析工具
+if (args.indexOf('BAP') >= 0) {
+  base.plugins.push(new BundleAnalyzerPlugin())
+}
 
 // Rules Configuration
 base.module.rules.push({
