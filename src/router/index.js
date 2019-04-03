@@ -1,4 +1,4 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 import Router from 'vue-router';
 
 const Login = () => import('./login/index.vue');

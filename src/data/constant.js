@@ -1,4 +1,4 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 import VueResource from 'vue-resource';
 // import {lsgGetData, lsgDeleteData, ssgGetData, ssgSaveData, ssgDeleteData} from '../../node_modules/web-js-tool/libs/js/util.js';
 

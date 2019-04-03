@@ -1,5 +1,5 @@
 import './style/main.css';
-import Vue from 'vue';
+// import Vue from 'vue';
 import router from './router';
 import App from './App';
 import {Loading, Tip, Confirm, Prompt} from 'web-base-ui';
