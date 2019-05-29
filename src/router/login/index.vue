@@ -5,11 +5,13 @@
     <button @click="sload">load</button>|
     <button @click="sconfirm">confirm</button>|
     <button @click="sprompt">prompt</button>|
-    <cmp-button @click="login">登录</cmp-button>
+    <cmp-button @click="login">登录</cmp-button>|
+    {{JSON.stringify(user)}}
   </div>
 </template>
 
 <script>
+  import {mapState} from 'vuex';
   import {Button} from 'web-base-ui';
   
   export default {
@@ -22,8 +24,16 @@
         // 
       };
     },
+    computed: {
+      ...mapState(['user'])
+    },
     mounted: function () {
-      // 
+      let _this = this;
+
+      console.log(this.$store.state.user);      
+      setTimeout(() => {
+        _this.$store.commit('setAge');
+      }, 3000);
     },
     methods: {
       login: function () {
