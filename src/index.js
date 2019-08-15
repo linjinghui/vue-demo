@@ -3,6 +3,7 @@ import './style/main.css';
 import store from './store';
 import router from './router';
 import App from './App';
+import directives from './directives';
 import {Loading, Tip, Confirm, Prompt} from 'web-base-ui';
 // import './mock.js';
 
@@ -12,6 +13,7 @@ import {Loading, Tip, Confirm, Prompt} from 'web-base-ui';
 });
 
 // 用于组件通信
+Vue.prototype.$eventbus = new Vue();
 window.EVENTBUS = new Vue();
 
 Vue.prototype.$store = store;

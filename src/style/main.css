@@ -1,2 +1,13 @@
 @import 'web-base-ui/lib/style/main.css';
-/* @import '../fonts/iconfont.css'; */
+
+/* 主题色 */
+.theme-c {
+  color: red;
+}
+.theme-b {
+  color: #fff;
+  background-color: red;
+}
+.theme-bc {
+  border-color: red;
+}
