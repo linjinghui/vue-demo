@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  // import {Button} from 'web-base-ui';
+  // import {Button} from 'lv-web-ui';
   
   export default {
     name: 'DevTool',

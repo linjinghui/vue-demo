@@ -156,7 +156,6 @@
     min-height: 630px;
     overflow: auto;
     background-color: #fff;
-    --theme: #0079ff;
   }
   
   /* 笔记本尺寸 1366 * 768 */

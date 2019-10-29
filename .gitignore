@@ -5,3 +5,4 @@ dist
 test
 .idea
 .git
+package-lock.json

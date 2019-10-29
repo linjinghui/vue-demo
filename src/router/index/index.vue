@@ -28,7 +28,7 @@
 </template>
 
 <script>
-  // import {Button} from 'web-base-ui';
+  // import {Button} from 'lv-web-ui';
   
   export default {
     name: 'Index',
@@ -249,8 +249,5 @@
   .aside-nav > li > a:hover {
     color: #fff;
     background-color: #1e282c;
-  }
-  .aside-nav > li > a.active {
-    border-color: var(--theme);
-  }  
+  } 
 </style>

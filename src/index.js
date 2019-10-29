@@ -4,7 +4,7 @@ import store from './store';
 import router from './router';
 import App from './App';
 import directives from './directives';
-import {Loading, Tip, Confirm, Prompt} from 'web-base-ui';
+import {Loading, Tip, Confirm, Prompt} from 'lv-web-ui';
 // import './mock.js';
 
 // 注册全局组件

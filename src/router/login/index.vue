@@ -12,7 +12,7 @@
 
 <script>
   import {mapState} from 'vuex';
-  import {Button} from 'web-base-ui';
+  import {Button} from 'lv-web-ui';
   
   export default {
     name: 'Login',
