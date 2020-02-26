@@ -1,13 +1,21 @@
 @import 'lv-web-ui/lib/style/main.css';
 
+/* noticejs样式 */
+.noticejs .close {
+  cursor: pointer;
+}
+.noticejs-progressbar {
+  display: none;
+}
+
 /* 主题色 */
 .theme-c {
-  color: red;
+  color: #ff0b22;
 }
 .theme-b {
   color: #fff;
-  background-color: red;
+  background-color: #ff0b22;
 }
 .theme-bc {
-  border-color: red;
+  border-color: #ff0b22;
 }

@@ -4,14 +4,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({  
 	state: {
-		user: {
-			age: 18
-		}
+		user: {}
 	},  
 	getters: {},
   mutations: {
-		setAge (state) {
-			state.user.age = 10;
+    // 设置登录用户信息
+		setUser (state, data) {
+			state.user = data;
 		}
 	}  
 });

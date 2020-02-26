@@ -42,10 +42,10 @@ app.get('/', (req, res) => {
 });
 
 // nginx 代理开始
-// app.use('/api', proxy('/api', {
-//   target: 'http://127.0.0.1:5001',
-//   changeOrigoin: true
-// }));
+app.use('/api', proxy('/api', {
+  target: 'http://114.115.200.40:9028/yyptapi',
+  changeOrigoin: true
+}));
 
 app.listen(config.port, () => {
   var url = 'http://localhost:' + config.port;

@@ -1,34 +1,11 @@
 <template>
   <div class="wrap page-home">
-    <header></header>
-    <nav>
-      <ul class="aside-nav">
-        <li v-for="(item1,index) in navOption.navData" :key="'lay1'+index">
-          <a :class="{'active':navOption.activeIndex_1===item1.id, 'open': navOption.openIndex_1===item1.id}" @click="clkNavItem([item1])">
-            <i style="border:solid 1px;" class="i-l">&nbsp;</i>
-            <span>{{item1.name}}</span>
-            <i style="border:solid 1px;" class="i-r arrow" v-if="item1.children&&item1.children.length>0"><</i>
-          </a>
-          <ul :style="{maxHeight:navOption.openIndex_1===item1.id?item1.children.length*36+'px':'0px'}">
-            <li v-for="(item2,index) in item1.children" :key="'lay2'+index">
-              <a :class="{'active':navOption.activeIndex_2===item2.id}" @click="clkNavItem([item1,item2])">
-                <i style="border:solid 1px;" class="i-l">&nbsp;</i>
-                <span>{{item2.name}}</span>
-                <i class="i-r arrow" v-if="item2.children&&item2.children.length>0"><</i>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    <section>
-      <router-view></router-view>
-    </section>
+    {{JSON.stringify(user)}}
   </div>
 </template>
 
 <script>
-  // import {Button} from 'lv-web-ui';
+  import { mapState } from 'vuex';
   
   export default {
     name: 'Index',
@@ -75,6 +52,9 @@
           ]
         }
       };
+    },
+    computed: {
+      ...mapState(['user'])
     },
     watch: {
       '$route': function (val) {

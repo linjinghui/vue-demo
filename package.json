@@ -1,5 +1,5 @@
 {
-  "name": "vue-demo",
+  "name": "l-vue-template",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -41,7 +41,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.4",
-    "lv-web-ui": "^1.0.1",
+    "lv-web-ui": "^1.0.4",
     "mocha": "^3.5.0",
     "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.5.3",
@@ -68,5 +68,11 @@
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-dev-middleware": "^1.11.0",
     "webpack-hot-middleware": "^2.18.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "notice.js": "^0.4.0",
+    "qs": "^6.9.1",
+    "vconsole": "^3.3.4"
   }
 }
