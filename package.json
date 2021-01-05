@@ -70,7 +70,7 @@
     "webpack-hot-middleware": "^2.18.2"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "notice.js": "^0.4.0",
     "qs": "^6.9.1",
     "vconsole": "^3.3.4"
