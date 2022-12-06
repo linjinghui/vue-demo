@@ -72,7 +72,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "notice.js": "^0.4.0",
-    "qs": "^6.9.1",
+    "qs": "^6.9.7",
     "vconsole": "^3.3.4"
   }
 }
